@@ -1,19 +1,103 @@
 body {
-    background-color: #cfe1c9;
-}
+    background-image: url("images/ac-background-2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
+@font-face {
+    font-family: "Fink Heavy";
+    src: url("fonts/fink-heavy.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "FOT Rodin Bokutoh";
+    src: url("fonts/fot-rodin-bokutoh-pro-eb.otf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
 
 h1 {
-    font-family: 'Poppins';
+    font-family: 'Fink Heavy';
     font-weight: bold;
-    font-size: x-large;
+    font-size: 30pt;
+    letter-spacing: 2px;
 }
 
 h2 {
-    font-family: 'Poppins';
-    font-weight: bold;
+    font-family: 'FOT Rodin Bokutoh';
+    font-weight: normal;
     font-size: large;
 }
 
+.button {
+    display: inline-block;
+    background: #364830;
+    color: white;
+    font-family: 'FOT Rodin Bokutoh';
+    font-weight: lighter;
+    text-decoration: none;
+    margin-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+.button:hover {
+    background-color: #5d7d53;
+  }
+  
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.item img {
+    width: 100px;
+    height: 100px;
+  }
+  
+.item p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }  
+
 img {
-    width: 200px;
-}
+    width: auto;
+    height: 250px;
+  }  
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+.burst {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.burst:hover {
+    animation: pulse 0.6s infinite ease-in-out;
+  }  
